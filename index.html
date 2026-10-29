@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Describer - Anthony Huang</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header style="text-align: center; margin-top: 2rem;">
+        <h1>Image Describer</h1>
+    </header>
+    
+    <main>
+        <form id="imageForm">
+            <label for="imageInput">
+                Select an image to describe:
+                <input type="file" id="imageInput" accept="image/*" required />
+            </label>
+            
+            <div id="previewContainer" style="display: none;">
+                <img id="imagePreview" alt="Image preview" />
+            </div>
+
+            <button type="submit" id="submitButton" disabled>Describe Image</button>
+        </form>
+
+        <!-- Status and Feedback Areas -->
+        <div id="loadingMessage" style="display: none;">
+            AI is processing the image... (This may take a moment)
+        </div>
+        <p id="error"></p>
+
+        <section id="resultContainer" style="display: none;">
+            <h2>AI Description:</h2>
+            <article id="aiOutput" class="message-content" aria-live="polite"></article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
