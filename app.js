@@ -94,6 +94,7 @@ async function describeImage(image) {
                     { type: "image_url", image_url: { url: image.dataUrl } },
                 ],
             }],
+            reasoning_effort: "none",
             stream: false,
         }),
     });
