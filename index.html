@@ -8,17 +8,18 @@
 </head>
 <body>
     <main>
-        <h1>Local LLM Multi-modal Image Describer</h1>
+        <h1>Ollama Multi-modal Image Describer</h1>
         <form id="imageForm">
-            <label for="imageInput">Upload Image:</label>
-            <input type="file" id="imageInput" accept="image/*" required />
-            
-            <div id="previewContainer" class="empty-preview" aria-live="polite">
-                <span id="previewPlaceholder">No image selected</span>
-                <img id="imagePreview" alt="Selected image preview" />
+            <label for="imageInput">Upload one or two images:</label>
+            <input type="file" id="imageInput" accept="image/*" multiple required />
+            <p class="hint">Select up to two images in the same file picker. They will appear side by side below.</p>
+
+            <div id="previewGrid" class="image-grid" aria-live="polite">
+                <div class="image-card empty-card"><h3>Image 1</h3><span>No image selected</span></div>
+                <div class="image-card empty-card"><h3>Image 2</h3><span>No image selected</span></div>
             </div>
 
-            <button type="submit" id="submitButton" disabled>Describe Image</button>
+            <button type="submit" id="submitButton" disabled>Describe Selected Images</button>
         </form>
 
         <!-- Status and Feedback Areas -->
@@ -27,9 +28,12 @@
         </div>
         <p id="error"></p>
 
-        <section id="resultContainer">
-            <h2>LLM Response:</h2>
-            <article id="aiOutput" aria-live="polite">Waiting for input...</article>
+        <section id="resultContainer" aria-live="polite">
+            <h2>LLM Responses:</h2>
+            <div id="responseGrid" class="image-grid">
+                <div class="response-card"><h3>Image 1 Description</h3><article>Waiting for input...</article></div>
+                <div class="response-card"><h3>Image 2 Description</h3><article>Waiting for input...</article></div>
+            </div>
         </section>
     </main>
 
