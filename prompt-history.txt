@@ -1,0 +1,28 @@
+PROMPT HISTORY
+==============
+
+TASK 1 — SINGLE IMAGE DESCRIBER
+------------------------------
+
+Prompt 1 — Initial interface update
+"I'd like the webui to be updated to more closely resemble the sample screenshots I provide below," followed by two reference screenshots of the single-image interface.
+
+TASK 2 — TWO-IMAGE CHALLENGE
+---------------------------
+
+Prompt 1 — Add two-image layout
+"Okay now we are going to adapt the webui to accomodate 2 images and descriptive responses. The formatting should resemble that of the provided example screenshot, images and their correpsonding descriptions should be side-by-side" followed by a reference screenshot.
+
+Prompt 2 — Return to Task 1 temporarily
+"Revert to the previous iteration with only 1 image and description temporarily"
+
+Prompt 3 — Restore the two-image version
+"Okay return to the duo image / description configuration"
+
+Prompt 4 — Work in Git checkpoints against the assignment requirements
+"Let's pause at checkpoints that'd make sense for git commits as per the below assignment details:" followed by the Task 2 requirements, screenshot names, branch and commit requirements, prompt-history requirements, and final folder structure.
+
+Prompt 5 — Provide the full assignment brief
+The user pasted the complete “Image to Text with Ollama” assignment, including Task 1 and Task 2 requirements, screenshot steps, Git branches, prompt history, and final submission structure.
+
+Note: Prompts are recorded from this conversation. No testing or troubleshooting prompts have been added unless they were actually asked.
